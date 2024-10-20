@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:ebebdeneme.ViewModels" xmlns:local1="clr-namespace:ebebdeneme.Models"
+             x:Class="ebebdeneme.Views.SilPage">
+
+    <ContentPage.BindingContext>
+        <local:SilViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker Title="Fiyat Aralığı Seç"
+                 x:Name="picker"
+                 SelectedItem="{Binding SelectedAralikFilter}">
+                <Picker.Items>
+                    <x:String>All</x:String>
+                    <x:String>0-25</x:String>
+                    <x:String>25-50</x:String>
+                    <x:String>50-100</x:String>
+                    <x:String>100-500</x:String>
+                    <x:String>500-2000</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <SearchBar Text="{Binding SearchText}" />
+            <ListView  x:Name="RestaurantsList"
+                   ItemsSource="{Binding Sils}" SelectionMode="None" BackgroundColor="White"  HasUnevenRows="True">
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell >
+                            <StackLayout Margin="10" VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal" >
+
+                                <Image Source="{Binding Url}" BackgroundColor="Transparent" HeightRequest="200" WidthRequest="250" />
+                                <StackLayout Margin="5,0,0,5" HorizontalOptions="Center" VerticalOptions="Center" Orientation="Vertical">
+
+                                    <Label Text="{Binding Name } " FontSize="20" FontAttributes="Bold" BackgroundColor="AliceBlue" TextColor="Orange" HorizontalOptions="Center" ></Label>
+                                    <Label Text="{Binding Fiyat } " FontSize="20" FontAttributes="Bold" BackgroundColor="AliceBlue" TextColor="Orange" HorizontalOptions="Center" ></Label>
+                                    <Button Text="Sepete Ekle" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"></Button>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

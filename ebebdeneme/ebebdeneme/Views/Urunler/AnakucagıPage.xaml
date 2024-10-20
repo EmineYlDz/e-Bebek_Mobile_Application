@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ebebdeneme.Views.AnakucagıPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="ANA KUCAĞI  "
+             TextColor="Orange"
+              HorizontalOptions="Center" />
+            <ListView x:Name="Giyims" SelectionMode="None" BackgroundColor="White"  HasUnevenRows="True">
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell >
+                            <StackLayout Margin="10" VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal" >
+
+                                <Image Source="{Binding Url}" BackgroundColor="Transparent" HeightRequest="200" WidthRequest="250" />
+                                <StackLayout Margin="5,0,0,5" HorizontalOptions="Center" VerticalOptions="Center" Orientation="Vertical">
+
+                                    <Label Text="{Binding Name } " FontSize="20" FontAttributes="Bold" BackgroundColor="AliceBlue" TextColor="Orange" HorizontalOptions="Center" ></Label>
+                                    <Label Text="{Binding Fiyat } " FontSize="20" FontAttributes="Bold" BackgroundColor="AliceBlue" TextColor="Orange" HorizontalOptions="Center" ></Label>
+                                    <Button Text="Sepete Ekle" HorizontalOptions="FillAndExpand"></Button>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

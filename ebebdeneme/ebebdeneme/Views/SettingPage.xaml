@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ebebdeneme.ViewModels"
+             x:Class="ebebdeneme.Views.SettingPage">
+    
+    <ContentPage.BindingContext>
+        <vm:GiyimViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Kategoriler" x:Name="ButtonCategories" Clicked="ButtonCategories_Clicked"></Button>
+            <Button Text="Ürünler" x:Name="ButtonProducts" Clicked="ButtonProducts_Clicked"></Button>
+            <Button Text="Kartlarım" x:Name="ButtonCart" Clicked="ButtonCart_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

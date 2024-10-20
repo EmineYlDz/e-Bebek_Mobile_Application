@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:vm="clr-namespace:ebebdeneme.ViewModels"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Visual="Material"
+             x:Class="ebebdeneme.Views.LoginPage">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content >
+        <Grid Padding="20" VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" VerticalOptions="Center">
+                <Image Source="unnamed.png"
+                       WidthRequest="40" HeightRequest=" 150"/>
+                <Label Text="Hoş Geldiniz"  TextColor="Black"
+                       FontSize="30" HorizontalOptions="Center" />
+
+            </StackLayout>
+            <StackLayout Grid.Row="1" Spacing="10" >
+                <Entry Placeholder="Kullanıcı Adı" Text="{Binding Username}" ></Entry>
+                <Entry Placeholder="Şifre" Text="{Binding Password}" IsPassword="True"  ></Entry>
+                <Button Text="Giriş Yap " Command="{Binding LoginCommand}" HorizontalOptions="Center" BackgroundColor="Orange" TextColor="white" WidthRequest="200" HeightRequest="60" CornerRadius="20" />
+                <Label Text="Yeni Kullanıcı :"/>
+                <Button Text="Kayıt Ol" Command="{Binding RegisterCommand}" HorizontalOptions="Center" BackgroundColor="Orange" TextColor="white" WidthRequest="200" HeightRequest="60" CornerRadius="20" ></Button>
+            </StackLayout>
+            
+        </Grid>
+    </ContentPage.Content>
+       
+</ContentPage>

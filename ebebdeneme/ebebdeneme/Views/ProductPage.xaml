@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ebebdeneme.ViewModels"
+             xmlns:helpers="clr-namespace:ebebdeneme.Helpers"
+             x:Class="ebebdeneme.Views.ProductPage">
+   <!-- <ContentPage.Content>
+        <Grid Margin="20,0,0,0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" ></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="Auto" ></RowDefinition>
+                    <RowDefinition Height="Auto" ></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Hoş Geldiniz" Grid.Row="0" Grid.Column="0" TextColor="Silver"></Label>
+                <Label Text="{Binding Username}" Grid.Row="1" Grid.Column="0" FontSize="20" FontAttributes="Bold"></Label>
+                <ImageButton Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Source="{FontImage FontFamily=FontAwesome,Glyph={x:Static helpers:}}"></ImageButton>
+            </Grid>
+            
+        </Grid>
+    </ContentPage.Content>-->
+</ContentPage>

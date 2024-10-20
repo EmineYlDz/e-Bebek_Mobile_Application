@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:ebebdeneme.Views"
+       Title="ebebdeneme"
+       x:Class="ebebdeneme.AppShell"
+       BackgroundColor=" #ff6800"
+       
+       Shell.TabBarBackgroundColor=" #ff6800"
+       Shell.TabBarUnselectedColor="white">
+
+
+
+    <Shell.FlyoutHeader>
+        <Label FontSize="50"  TextColor="Orange"   Text="  𝙚𝙗𝙚𝙗𝙚𝙠"/>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Ana Sayfa" Icon ="ebebek.jpg" > 
+        <Tab Icon="anasayfa.png" 
+             Title="Ana Sayfa">
+            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+
+        </Tab>
+        <Tab Icon="kategori.png" 
+             Title="Kategori">
+            <ShellContent Title="KIYAFET" ContentTemplate="{DataTemplate local:KiyafetPage}" />
+            <ShellContent Title="AYAKKABI" ContentTemplate="{DataTemplate local:AyakkabiPage }" />
+            <ShellContent Title="BEŞİK" ContentTemplate="{DataTemplate local:YatakPage }" />
+            <ShellContent Title="BEBEK ODASI AKSESUARLARI" ContentTemplate="{DataTemplate local:BebekOdasiAksesuarPage }" />
+            <ShellContent Title="BEBEK BANYO ÜRÜNLERİ" ContentTemplate="{DataTemplate local:BebekBanyoPage}" />
+            <ShellContent Title="BEBEK BAKIM ÜRÜNLERİ" ContentTemplate="{DataTemplate local:BebekBakimPage}" />
+            <ShellContent Title="EĞİTİCİ OYUNCAKLARI" ContentTemplate="{DataTemplate local:EgiticiPage }" />
+            <ShellContent Title="BEBEK OYUNCAKLARI" ContentTemplate="{DataTemplate local:BebekOyuncaklariPage }" />
+            <ShellContent Title="BEBEK ARABASI" ContentTemplate="{DataTemplate local:BebekArabasiPage }" />
+            <ShellContent Title="ANA KUCAĞI" ContentTemplate="{DataTemplate local:AnakucagıPage}" />
+            <ShellContent Title="iÇ GİYİM" ContentTemplate="{DataTemplate local:IcGiyimPage}" />
+            <ShellContent Title="BEBEK ÇANTASI" ContentTemplate="{DataTemplate local:BebekCantaPage}" />
+            <ShellContent Title="YENİ DOĞAN" ContentTemplate="{DataTemplate local:YenidoganBebekPage}" />
+            
+
+        </Tab>
+       <!-- <Tab Icon="kategori.png"
+             Title="Kategori">
+            <ShellContent ContentTemplate="{DataTemplate local:SettingPage}"/>
+        </Tab>-->
+        <Tab Icon="search.png" 
+             Title="Arama">
+            <ShellContent Route="AraPage" ContentTemplate="{DataTemplate local:SilPage}" />
+        </Tab>
+        <Tab Icon="sepetimm.png" 
+             Title="Sepetim">
+            <ShellContent Route="CartView" ContentTemplate="{DataTemplate local:CartView}" />
+        </Tab>
+        <Tab Icon="Giris.png" 
+             Title="Giriş Yap">
+            <ShellContent Route="LoginPage"  ContentTemplate="{DataTemplate local:LoginPage}" />
+        </Tab>
+
+    </FlyoutItem>
+    <FlyoutItem Title="Search" Icon ="search.jpg">
+
+        <Tab Icon="anasayfa.png" 
+             Title="Ana Sayfa">
+            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+        </Tab>
+        <Tab Icon="kategori.png" 
+             Title="Kategori">
+            <ShellContent Title="KIYAFET" ContentTemplate="{DataTemplate local:KiyafetPage}" />
+            <ShellContent Title="AYAKKABI" ContentTemplate="{DataTemplate local:AyakkabiPage }" />
+            <ShellContent Title="BEŞİK" ContentTemplate="{DataTemplate local:YatakPage }" />
+            <ShellContent Title="BEBEK ODASI AKSESUARLARI" ContentTemplate="{DataTemplate local:BebekOdasiAksesuarPage }" />
+            <ShellContent Title="BEBEK BANYO ÜRÜNLERİ" ContentTemplate="{DataTemplate local:BebekBanyoPage}" />
+            <ShellContent Title="BEBEK BAKIM ÜRÜNLERİ" ContentTemplate="{DataTemplate local:BebekBakimPage}" />
+            <ShellContent Title="EĞİTİCİ OYUNCAKLARI" ContentTemplate="{DataTemplate local:EgiticiPage }" />
+            <ShellContent Title="BEBEK OYUNCAKLARI" ContentTemplate="{DataTemplate local:BebekOyuncaklariPage }" />
+            <ShellContent Title="BEBEK ARABASI" ContentTemplate="{DataTemplate local:BebekArabasiPage }" />
+            <ShellContent Title="ANA KUCAĞI" ContentTemplate="{DataTemplate local:AnakucagıPage}" />
+
+        </Tab>
+        <Tab Icon="search.png" 
+             Title="Arama">
+            <ShellContent Route="AraPage" ContentTemplate="{DataTemplate local:SilPage}" />
+        </Tab>
+        <Tab Icon="sepetimm.png" 
+             Title="Sepetim">
+            <ShellContent Route="CartView" ContentTemplate="{DataTemplate local:CartView}" />
+        </Tab>
+        <Tab Icon="Giris.png" 
+             Title="Giriş Yap">
+            <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+        </Tab>
+
+    </FlyoutItem>
+    
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
+        <Tab Title="Giyim"
+                Icon="henger.png">
+
+            <ShellContent Title="Kıyafet" Route="KiyafetPage" 
+                          ContentTemplate="{DataTemplate local:KiyafetPage }"/>
+
+            <ShellContent Title="Ayakkabı" Route="AyakkabiPage"
+                   ContentTemplate="{DataTemplate local:AyakkabiPage}" />
+
+            <ShellContent Title="İç Giyim" Route="IcGiyimPage"
+                   ContentTemplate="{DataTemplate local:IcGiyimPage}" />
+
+            <ShellContent Title="Bebek Çantası" Route="BebekCantaPage"
+                   ContentTemplate="{DataTemplate local:BebekCantaPage }" />
+
+            <ShellContent Title="Yenidoğan Giyim" Route="YenidoganBebekPage"
+                   ContentTemplate="{DataTemplate local:YenidoganBebekPage }" />
+        </Tab>
+
+
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="BebekOdası"
+                Icon="bebekodasi.png">
+            <ShellContent Title="Bebek Yatak" Route="YatakPage" 
+                          ContentTemplate="{DataTemplate local:YatakPage }"/>
+
+            <ShellContent Title="Bebek Odası Aksesuararı" Route="BebekOdasiAksesuarPage"
+                   ContentTemplate="{DataTemplate local:BebekOdasiAksesuarPage}" />
+        </Tab>
+
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Banyo/Bakım"
+                Icon="banyo.png">
+            <ShellContent Title="Bebek Banyo Ürünleri" Route="BebekBanyoPage" 
+                          ContentTemplate="{DataTemplate local:BebekBanyoPage }"/>
+
+            <ShellContent Title="Bebek Bakım Ürünleri" Route="BebekBakimPage"
+                   ContentTemplate="{DataTemplate local:BebekBakimPage }" />
+
+
+        </Tab>
+
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Oyuncak/Kitap"
+                Icon="puzzle.png">
+            <ShellContent Title="Bebek Eğitici Oyuncaklar" Route="EgiticiPage" 
+                          ContentTemplate="{DataTemplate local:EgiticiPage}"/>
+
+            <ShellContent Title="Bebek Oyuncakları" Route="BebekOyuncaklariPage"
+                   ContentTemplate="{DataTemplate local:BebekOyuncaklariPage}" />
+
+
+        </Tab>
+
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Araç/Gereç"
+                Icon="arac.png">
+            <ShellContent Title="Ana Kucağı " Route="AnakucagıPage " 
+                          ContentTemplate="{DataTemplate local:AnakucagıPage }"/>
+
+            <ShellContent Title="Bebek Arabası" Route="BebekArabasiPage"
+                   ContentTemplate="{DataTemplate local:BebekArabasiPage}" />
+
+
+        </Tab>
+
+    </FlyoutItem>
+  
+    <FlyoutItem Title="GİRİŞ YAP" Icon  = "Giris.png">
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+    </FlyoutItem>
+    
+
+
+</Shell>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Visual="Material"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="ebebdeneme.Views.OrdersView">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding BackCommand}"
+                            IconOverride="back.png"></BackButtonBehavior>
+    </Shell.BackButtonBehavior>
+    <ContentPage.Content>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ImageButton Source="{FontImage FontFamily=FontAwesome,Size=30,Color=White}" Grid.Row="0"
+                         HorizontalOptions="Start" Aspect="AspectFit" VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked"></ImageButton>
+            <Label Text="SİPARİŞLERİM" FontSize="40" TextColor="Black" 
+                   FontFamily="CabinSketch" HorizontalOptions="Center" VerticalOptions="Center"> </Label>
+            <Label x:Name="LabelName" FontSize="Subtitle" Margin="20,0" TextColor="WhiteSmoke" HorizontalOptions="Center"
+                   VerticalOptions="End"></Label>
+            <pancake:PancakeView BackgroundColor="Bisque" CornerRadius="60,60,0,0" Grid.Row="1">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                    <Label Text="BİZİ TERCİH ETTİĞİNİZ İÇİN TEŞEKKÜR EDERİZ"></Label>
+                    <Label Text="DAHA FAZLA TAKİP İÇİN LÜTFEN SİPARİŞ NUMARANIZI NOT EDİN "></Label>
+                    <Label x:Name="LabelOrderID" TextColor="Black" FontSize="Subtitle"></Label>
+                    <Button Text="Ana Sayfaya Dön" WidthRequest="200" BackgroundColor="Black" HorizontalOptions="Center"
+                            CornerRadius="20" Clicked="Button_Clicked"></Button>
+                    
+                </StackLayout>
+            </pancake:PancakeView>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
